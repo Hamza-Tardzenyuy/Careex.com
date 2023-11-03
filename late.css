@@ -150,7 +150,7 @@ body {
  .mobile-nav {
             display: block;
             position: absolute;
-            background-image: url(/Images/fa\ bars.svg);
+            background-image: url(/Images/bars-solid.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-color: var(--color);
