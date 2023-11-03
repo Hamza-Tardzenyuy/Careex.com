@@ -153,7 +153,7 @@ body {
             background-image: url("burger-bar.png");
             background-repeat: no-repeat;
             background-position: center;
-            background-color: var(--color);
+            background-color: white;
             cursor: pointer;
             width: 2.5rem;
             aspect-ratio: 1;
