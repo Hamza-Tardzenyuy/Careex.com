@@ -1,0 +1,620 @@
+   * {
+    font-family: sans-serif; 
+  box-sizing: border-box;
+align-items: center;
+}
+
+:root {
+    --gap: 2rem;
+    --color: rgb(14, 167, 167);
+}
+
+.header {
+    overflow: hidden;
+    display: flex;
+   
+    justify-content: space-evenly;
+    flex-wrap: wrap ;
+gap: 0.34em;
+ padding-left: 1em;
+    height: 08rem;
+    background-color: #183030;
+   color: wheat;
+}
+
+img[alt="contacts"] {
+    width: 15px;
+    background-color: var(--color);
+}/* sets the width of svg images with alt attribute of contacts */
+
+.contacts {
+    display: flex;
+    top: 0;
+ 
+    
+}
+
+.social-links, a {
+    display: flex;
+    padding-right: 0em;
+    bottom: 0rem;
+}
+
+
+
+
+/*Primary-header*/
+
+
+.logo {
+    width: 3em; 
+ margin: 0.15rem;
+}
+
+
+.flex {
+        display: flex;
+        --gap: 1rem;
+}
+
+
+
+.primary-header {
+    margin-top: 0;
+padding: 0;
+justify-content: space-between;
+height: 5.5%;
+align-items: center;
+    background-color: rgba(236, 236, 236, 0.887);
+    flex-wrap: wrap;
+   
+   
+  
+}
+
+.primary-navigation {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   
+}
+
+.primary-navigation li {
+    margin-inline-end: var(--pad, 1rem);
+
+}
+
+.primary-navigation  a {
+    color: black;
+} 
+.primary-navigation li:hover {
+    
+background-color: var(--color);
+
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+#article{
+    background-image: url(Images/Sthesthoscope.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+  color: black;
+  
+  margin-top: 2rem;
+  padding: 2em;
+   }/* styles the first background photo and it text  in the index page */
+
+  
+@media (max-width: 43em) {
+    .primary-navigation {
+        --gap: 2rem;
+        position: fixed;
+          inset: 0 0 0 40%;
+          flex-direction: column;
+          padding: min(10vh, 6rem);
+          margin-top: 0em;
+          padding-left: 1rem;
+          background-color: rgb(221, 240, 240);
+         transform: translateX(100%);
+       transition: transform 0.25s  ease-out;
+      }
+.primary-navigation li {
+    padding: 0;
+}
+
+
+.primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+    box-shadow:  2px 4px 60em 3em #333; 
+
+}
+
+.primary-navigation[data-visible="true"] {
+    .mobile-nav {
+        position: fixed;
+    }
+}
+
+
+
+ .mobile-nav {
+            display: block;
+            position: absolute;
+            background-image: url(/Images/fa\ bars.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: var(--color);
+            cursor: pointer;
+            width: 2.5rem;
+            aspect-ratio: 1;
+            top: 10em;
+            right: 0.50rem;
+            border: none;
+            border-radius: 0.40em;
+            z-index: 1;
+        }
+        .mobile-nav[aria-expanded="true"] {
+           background-image: url(Images/close.svg);
+           top: 2em;
+             }
+     
+}/* The media query here helps control the hambuger button and how 
+the navigation menu will be accessed*/
+   
+
+.about-us {
+    perspective: 1000%;  /* Gives the card 3D effect*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ width: 50%;
+height: 40vh;
+margin: auto;
+
+} /*styles the card */
+
+
+.flip-card{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  
+}
+
+
+.about-us .flip-card img {
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    backface-visibility: hidden;
+    object-fit: cover;
+background-color: var(--color);
+z-index: 0;
+
+}
+
+.flip-card:hover {
+    transform: rotateX(180deg);
+
+}
+
+
+.text {
+position: absolute;
+width: 100%;
+ margin: auto;
+}
+ 
+  
+.flip-card:hover .text {
+    display: none;
+
+}
+
+
+
+.flip-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+   left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(Images/Austin.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+   
+}
+
+
+
+.small {
+    margin-top: 1em;
+    font-size: 20px;
+  
+}
+
+.big {
+    font-size: 50px;
+} 
+
+button {
+background-color: rgb(224, 236, 44);
+opacity: 1;
+width: 160px;
+height: 3em;
+border: none;
+border-radius: 72px;
+margin-bottom: 1em;
+}
+
+
+main, table {
+    background-color: var(--color);
+    padding: 1rem;
+  color: white;
+  line-height: 20px;
+  width: 100vw;
+margin: 0%;
+ 
+}
+
+main, table {
+    width: 100%;
+    text-align: center;
+}
+#check {
+    font-size: x-large;
+    padding-right: 100px;
+} /*styles the top main text "check our*/
+#title {
+font-size: 30px;}
+
+.time {
+    color: yellow;
+} /*gives a yellow color to the time in the table*/
+
+/*styles to footer starts here*/
+
+
+.footer{
+    width: 100%;
+    background-color: black;
+    color: aliceblue; 
+margin-top: 7rem;
+
+}
+
+
+
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.75em;
+
+  
+}
+
+.row p {
+    padding-left: 1rem;
+   
+}
+
+ul {
+    list-style: none;
+}
+
+
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+   
+   }
+
+   #phonenum  {
+    color: yellow;
+   } /* gives the phone number a yellow color*/
+
+   footer, a {
+text-decoration: none;
+display: block;
+padding: 0.5rem;
+color: white;
+ }
+
+  .footer a:hover {
+    background-color: aqua;
+    color: black;
+  }
+
+  /* Media Query for the footer*/
+  @media(max-width: 35em) {
+   .row {
+flex: 1;
+flex-direction: column;
+    }
+.row {
+    padding: 0;
+}
+
+.footer-col:nth-child(1) {
+    padding-left: 2.8em;
+}
+
+  }
+    
+
+    
+
+
+/* style to about page starts below */
+
+img[alt="about"] {
+    width: 100%;
+    margin-right: auto;
+}/*the top most photo in about page*/
+
+span {
+    font-weight: bold;
+    text-align: center;
+}
+
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+   
+}
+
+.testimonial-container h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 15px;
+
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.round-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: calc(50% - 25px);
+    cursor: pointer;
+
+}
+
+.carousel-control {
+    display: inline-block;
+    font-size: 30px;
+    color: #a49b9b;
+    
+}
+
+.carousel-control:hover {
+    color: #333;
+    }
+
+/*styles to DOCTORS page below*/
+h2 {
+    text-align: center;
+}
+
+   .doctor-info {
+    display: flex;
+    flex-direction: column;
+   margin: 10em;
+    line-height: 1em;
+  }
+
+.doctor-info img {
+    width: 100%;
+    margin: auto;
+    
+       }/* styles the doctors photo*/
+
+       
+li {
+    display: flex;
+
+} /* a flex on the li container to help style the contacts svgs*/
+      
+ .contact-info [alt="contacts"]{
+    position: absolute;
+    width: clamp(1rem, 4vw, 1em);
+     }/* applies the settings to images with alt attribute with value 'svg' */
+  
+
+
+     .contact-info li a {
+    color: #353232;
+    margin-left: 2em;
+}/* text color to phone number and email*/
+
+.contact-info  .role {
+    font-size: 70%;
+    color: #1f1d1d;
+  
+}/* applies to doctor's role*/
+
+.contact-info .name {
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: 0.50rem;
+}/* styles to the name of the doctor */
+
+.doctor-info li:hover {
+    background-color: var(--color);
+}/*hover effect on all list elements in doctor info*/
+
+ .certificate img {
+   width: 100%;
+    margin: auto;
+}/*styles doctors certificates*/
+
+@media(max-width: 35em) {
+    .doctor-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+     margin: auto;
+        line-height: 1em;
+      }
+    
+    .doctor-info img {
+        width: 100%;
+       margin: auto;
+        
+           }/* styles the doctors photo*/
+    
+           
+    li {
+        display: flex;
+    }
+} 
+
+
+ /* Styles to Services starts here*/
+
+ .article {
+    background-image: url(Images/Sthesthoscope.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+ }
+
+ .article div {
+padding-left: 2rem;
+ }
+
+.accordion-toggle {
+    width: 100%;
+    background-color: azure;
+  cursor: pointer;
+  border-radius: 0%;
+  text-align: left;
+  padding-left: 2em;
+}/*styles the accordion toggle buttton*/
+
+.accordion-toggle:hover {
+    background-color: var(--color);
+}
+
+
+.accordion-content {
+    display: none;
+}
+
+.accordion.open .accordion-content{
+    display: block;
+}
+
+
+input {
+    width: 100%;
+        border: none;
+          border-bottom: solid 0.45px rgb(34, 33, 33);
+          padding: 0em;
+         outline: none;
+          height: 3rem;
+          padding-left: 2rem;
+
+}
+
+input, :focus {
+    border: rgb(17 , 179, 160);
+}
+
+input::placeholder {
+    text-align: left;
+    
+}
+
+textarea {
+
+   
+    padding: 5px 80px;
+border: none;
+    outline: none;
+    resize: none;
+  text-align: left;
+} 
+    
+    label {
+    padding: 12px 12px 12px 0;
+        display: inline-block;
+        
+    }
+    input[type=text], textarea {
+        width: 100% ;
+    border: none;
+    outline: none;
+    border-bottom: 0.1em solid rgb(42, 41, 41);
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    resize: none;
+    word-wrap: break-word;
+  
+}
+
+input[type=text]:focus {
+    border-bottom:solid rgb(17, 119, 160);
+}
+
+.reachout {
+    background-color: var(--color);
+    margin:   1rem;
+    padding: 1em;
+}
+
+#social-handle {
+    top: 1rem;
+  justify-content: center;
+}
+
+/*styles to CONTACTS page*/
